@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" href="./images/logosf.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liebert - Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <a href="portifolio.html"><img class="imglogo" src="./images/logosf.png" alt=""></a>
+        <h1 class="nome">Liebert Henrique Simões de Oliveira</h1>
+    </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeriatitulo">Trabalhos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <img src="./images/liebert.png" alt="Foto pessoal" class="fotoperfil" />
+      <div class="texto-sobre" id="sobre">
+        <p class="sbm">Meu nome é Liebert Henrique Simões de Oliveira, nasci em 16 de dezembro de 2007 e atualmente sou estudante do curso de Tecnologia da Informação no SENAI, cursando o 3º ano do Ensino Médio. Estudo na escola SESI Joelmir Beting (CE-370), localizada em Tambaú, interior de São Paulo. Desde cedo, sempre me interessei por tecnologia e busquei aprender cada vez mais sobre o assunto. Essa curiosidade me motivou a seguir uma formação técnica na área de TI. Ao longo do tempo, venho desenvolvendo uma base sólida de conhecimentos. Me dedico ao máximo em tudo o que faço, sempre com foco no aprendizado.</p>
+        <p class="sbm">Durante o curso, adquiri grande habilidade na área de front-end, me destacando principalmente no desenvolvimento de interfaces e aplicações web. Sou esforçado, estudioso e me adapto bem ao trabalho em equipe, valorizando sempre a troca de ideias. Uma das minhas maiores qualidades é a dedicação, que me permite ir além do básico e buscar soluções criativas. Também tenho facilidade em utilizar ferramentas como o ChatGPT para otimizar estudos e projetos. Gosto de enfrentar desafios e aprender com eles.</p>
+        <p class="sbm">Além das habilidades técnicas, desenvolvi características importantes como proatividade, organização e raciocínio lógico. Essas qualidades me ajudam a lidar com problemas de forma prática e eficiente. Busco sempre me atualizar com as tendências da área, explorando novas ferramentas e linguagens. Acredito no poder da colaboração e da inovação como forças para o crescimento pessoal e profissional. Tenho interesse em seguir carreira na área de desenvolvimento, contribuindo com soluções úteis e criativas. Com esforço e dedicação, quero transformar meu conhecimento em impacto positivo.</p>
+      </div>
+    </section>
+    <br>
+    <hr>
+    <div id="galeriatitulo" class="galeriatitulo">
+        <h2 class="galti">Galeria de Projetos:</h2>
+    </div>
+    <section id="trabalhos" class="galeria">
+  <div class="projeto">
+    <img src="./images/projeto1.png" alt="projeto1" class="projeto1" onclick="abrirModal('Matemática - Funções do Segundo Grau', 'Este aplicativo sobre funções de segundo grau foi desenvolvido por alunos do SENAI da Escola SESI Joelmir Beting (CE-370) com o objetivo de facilitar o aprendizado matemático de forma interativa e acessível. A plataforma permite visualizar gráficos, resolver equações e entender conceitos como vértice, raízes e concavidade de maneira prática. Com uma interface intuitiva, o app oferece explicações passo a passo e atividades para fixação do conteúdo. Voltado para estudantes do ensino fundamental e médio, ele combina tecnologia e educação para tornar o estudo da matemática mais envolvente. O projeto reforça o compromisso dos alunos com a inovação e o ensino de qualidade.', 'portifolio.html')" />
+    <h3>Matemática - Funções do Segundo Grau</h3>
+  </div>
+  <div class="projeto">
+    <img src="./images/projeto2.png" alt="Projeto 2" onclick="abrirModal('AvanteVanguarda', 'A Avante Vanguarda nasceu com o propósito de inovar e transformar. Criada por estudantes do 3º ano do SESI Joelmir Beting, em parceria com o SENAI, a iniciativa busca oferecer soluções criativas e eficazes para os desafios do presente e do futuro. Com uma equipe apaixonada e experiente, estamos sempre à frente das tendências, comprometidos com a excelência e o impacto positivo. Acreditamos que o futuro pertence àqueles que ousam inovar e que cada projeto é uma oportunidade de crescimento. Junte-se a nós nessa jornada de evolução constante e transformação real.', 'projeto2/linguaPortugue.html')" />
+    <h3>AvanteVanguarda</h3>
+  </div>
+  <div class="projeto">
+    <img src="./images/projeto3.png" alt="Projeto 3" onclick="abrirModal('NutriGestão', 'NutriGestão é uma ferramenta criada por estudantes do 3º ano do SESI Joelmir Beting, em parceria com o SENAI, com foco na gestão inteligente do consumo de alimentos em escolas. O projeto utiliza soluções tecnológicas para equilibrar a oferta e a demanda, reduzir desperdícios e garantir refeições adequadas para todos os alunos. Seu objetivo é promover uma alimentação mais sustentável, eficiente e alinhada ao bem-estar estudantil. Ainda em andamento, o NutriGestão segue em constante evolução, buscando aperfeiçoar seus recursos e ampliar seu impacto nas instituições de ensino.', 'projeto3/login.html')" />
+    <h3>NutriGestão</h3>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+    <h2 id="modalTitulo">Título do Projeto</h2>
+    <p id="modalDescricao" class="modalDescricao">Descrição do projeto.</p>
+    <a id="modalLink" href="#" target="_blank">
+      <button class="btn">Acessar Projeto</button>
+    </a>
+  </div>
+</div>
+  </main>
+  <footer>
+    <section id="contato" class="contato">
+      <p class="pContato"><b>Entre em contato:</b></p>
+      <div class="iconsdiv">
+      <a href="liebert.oliveira@senai.org.br"><img class="icons" src="./images/email.png"></a>
+      <a href="https://github.com/Liebert99" target="_blank"><img class="icons" src="./images/github.png"></a>
+      <a href="https://instagram.com/liebert_henrique" target="_blank"><img class="icons" src="./images/instagram.png"></a>
+      </div>
+    </section>
+    <p class="copy">&copy; 2025 Liebert Henrique Simões de Oliveira - Todos os direitos reservados.</p>
+  </footer>
+</body>
+<script>
+  function abrirModal(titulo, descricao, link) {
+    document.getElementById("modalTitulo").textContent = titulo;
+    document.getElementById("modalDescricao").textContent = descricao;
+    document.getElementById("modalLink").href = link;
+    document.getElementById("modal").style.display = "block";
+  }
+
+  function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  // Fecha o modal ao clicar fora da área de conteúdo
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      fecharModal();
+    }
+  }
+</script>
+
+</html>

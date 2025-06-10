@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h2>Bem Vindo!</h2>
+            <p>Para se manter conectado conosco<br>por favor logue com suas informações pessoais</p>
+            <a href="login.html"><button>Login</button></a>
+        </div>
+        <div class="registro">
+            <h2>Cadastro</h2>
+            <div class="field-group">
+                <label for="funcao">Função</label>
+                <select id="funcao" name="funcao" required>
+                    <option value="nutricionista">Nutricionista</option>
+                    <option value="profissional-cozinha">Profissional da Cozinha</option>
+                </select>
+            </div>
+            <input type="password" placeholder="Nome Completo">
+            <input type="text" placeholder="CPF">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Unidade Escolar">
+            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="confirmar senha">
+            <div class="lembrar">
+            <label for="lembrar-me">
+                <input type="checkbox" id="lembrar-me" name="lembrar-me"> Lembrar-me
+            </label>
+            </div>
+            <br/>
+            <div class="form-actions">
+            </div>
+            <a href="login.html"><button>Cadastrar-se</button></a>
+        </div>
+    </div>
+</body>
+</html>

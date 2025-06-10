@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>NutriGestão-Desperdício</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="2.png" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container"><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="page"><a style="display: none;"section section-banner d-none d-xl-block href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(6.png); background-image: -webkit-image-set( url(6.png) 1x, url(6.png) 2x )"><img src="7.png" srcset="7.png 1x, 7.png 2x" alt="" width="1600" height="310"></a>      <!-- Page Header-->   
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-modern-wrap">
+          <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="70px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-brand"><img src="8.png"/></div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand
+                  <div class="rd-navbar-brand"><img src="4.png" alt="" width="400" height="50"/></div>
+                </div>-->
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item "><a class="rd-nav-link" href="Inicio.html"><b>Início</b></a>
+                      </li>
+                      <li class="rd-nav-item "><a class="rd-nav-link" href="refeicao.html"><b>Refeições</b></a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="desperdicio.html"><b>Desperdícios</b></a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="relgra.html"><b>Relatórios</b></a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contagem.html"><b>Contagem</b></a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="restricoes_dietas.html"><b>Restricões & Dietas</b></a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="cardapio.html"><b>Cardápio</b></a>
+                      </li>
+                    </ul>
+                    <!-- Ícone de Perfil com Dropdown -->
+                    <div class="profile-container" style="position: relative; margin-left: 20px;">
+                      <div class="profile-icon" id="profileIcon" style="width: 40px; height: 40px; background-color: #ff990032; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                        <b style="color: #f89200;">NG</b>
+                      </div>
+                      <div class="dropdown" id="dropdownMenu" style="display: none; position: absolute; top: 50px; right: 0; background-color: white; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; z-index: 1000;">
+                        <button onclick="logout()" style="background-color: #f89200; border: none; padding: 8px 12px; border-radius: 5px; color: white; cursor: pointer;">Sair</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="container">
+        <!-- Resumo de Desperdício -->
+        <div class="card">
+            <h3>Desperdício Alimentar:</h3>
+            <div class="indicator">
+                <p><strong>Desperdício Diário:</strong> <span id="daily-waste">0 kg</span></p>
+                <p><strong>Desperdício Semanal:</strong> <span id="weekly-waste">0 kg</span></p>
+                <p><strong>Desperdício Mensal:</strong> <span id="monthly-waste">0 kg</span></p>
+            </div>
+        </div>
+    
+        <!-- Filtros e entrada de desperdício -->
+        <div class="card">
+            <h3>Registre o Desperdício:</h3>
+            <div class="input-container">
+                <select id="period-filter">
+                    <option value="daily">Diário</option>
+                    <option value="weekly">Semanal</option>
+                    <option value="monthly">Mensal</option>
+                </select>
+                <input type="number" id="waste-input" placeholder="Desperdício (kg)" />
+                <button onclick="registerWaste()">Registre o Desperdício</button>
+            </div>
+        </div>
+    
+        <!-- Gráficos de Desperdício -->
+        <div class="chart-container">
+            
+            <div class="chart-card">
+                <h3>Desperdício Semanal</h3>
+                <canvas id="totalWasteChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Adicionando Chart.js para gráficos interativos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Dados de exemplo (inicialmente vazios)
+        const wasteByStudentData = [0, 0, 0, 0, 0]; // Desperdício por aluno
+        const totalWasteData = { daily: [0, 0, 0, 0, 0], weekly: [0, 0, 0, 0, 0], monthly: [0, 0, 0, 0, 0] };
+        // Gráfico de desperdício total
+        const ctxTotalWaste = document.getElementById('totalWasteChart').getContext('2d');
+        const totalWasteChart = new Chart(ctxTotalWaste, {
+            type: 'line',
+            data: {
+                labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'],
+                datasets: [{
+                    label: 'Desperdício Total (kg)',
+                    data: totalWasteData.daily,
+                    borderColor: '#f79202',
+                    backgroundColor: 'rgb(244 146 0 / 58%)',
+                    fill: true,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    
+        // Função para registrar desperdício
+        function registerWaste() {
+            const wasteInput = document.getElementById('waste-input').value;
+            const period = document.getElementById("period-filter").value;
+    
+            // Adiciona o desperdício de acordo com o período
+            if (!wasteInput) {
+                alert('Por favor, insira um valor de desperdício.');
+                return;
+            }
+    
+            const waste = parseFloat(wasteInput);
+    
+            if (period === 'daily') {
+                // Atualizar o desperdício total diário
+                totalWasteData.daily.push(waste);
+                totalWasteData.daily.shift(); // Remove o valor mais antigo
+                updateSummary('daily', waste);
+            } else if (period === 'weekly') {
+                // Atualizar o desperdício total semanal
+                totalWasteData.weekly.push(waste);
+                totalWasteData.weekly.shift(); // Remove o valor mais antigo
+                updateSummary('weekly', waste);
+            } else if (period === 'monthly') {
+                // Atualizar o desperdício total mensal
+                totalWasteData.monthly.push(waste);
+                totalWasteData.monthly.shift(); // Remove o valor mais antigo
+                updateSummary('monthly', waste);
+            }
+    
+            // Atualizar gráfico de desperdício total
+            totalWasteChart.update();
+        }
+    
+        // Função para atualizar o resumo de desperdício
+        function updateSummary(period, waste) {
+            if (period === 'daily') {
+                document.getElementById('daily-waste').textContent = `${waste} kg`;
+            } else if (period === 'weekly') {
+                document.getElementById('weekly-waste').textContent = `${waste} kg`;
+            } else if (period === 'monthly') {
+                document.getElementById('monthly-waste').textContent = `${waste} kg`;
+            }
+        }
+    </script>
+    <br><br><br>
+
+
+
+
+      <!--
+<a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/background-03-1920x310.jpg) 1x, url(images/banner/background-03-3840x620.jpg) 2x )"><img src="images/banner/foreground-03-1600x310.png" srcset="images/banner/foreground-03-1600x310.png 1x, images/banner/foreground-03-3200x620.png 2x" alt="" width="1600" height="310"></a>
+      Page Footer-->
+      <footer class="section footer-variant-2 footer-modern context-dark section-top-image section-top-image-dark">
+        <div class="footer-brand"><a href="Inicio.html"><img src="8.png" alt="" width="196" height="42"/></a></div>
+        <div class="copy">
+          <p class="direitos">&copy; 2025 <b>NutriGestão</b> - Todos os direitos reservados</p>
+        </div>
+        <br><br>
+      </footer>
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- coded by Ragnar-->
+  </body>
+  <script>
+    const profileIcon = document.getElementById('profileIcon');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+  
+    profileIcon.addEventListener('click', () => {
+      dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+  
+    window.addEventListener('click', function(e) {
+      if (!profileIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+  
+    function logout() {
+      // Redireciona para a página de login
+      window.location.href = "login.html";
+    }
+  </script>
+</html>
